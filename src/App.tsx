@@ -64,9 +64,9 @@ export const App: React.FC = () => {
           <div className="dropdown-menu" role="menu" data-cy="suggestions-list">
             <div className="dropdown-content">
               {(query === '' ? peopleFromServer : filteredHumans).map(
-                (el: Person, id: number) => (
+                (el: Person) => (
                   <div
-                    key={id}
+                    key={el.name}
                     className="dropdown-item"
                     data-cy="suggestion-item"
                     onClick={() => {
